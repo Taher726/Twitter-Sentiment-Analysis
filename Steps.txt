@@ -1,0 +1,33 @@
+1- Importing dependecies (done)
+2- Importing dataset (done)
+3- Preprocess Text: (done)
+	-Lower Casing: Each text is converted to lowercase.
+	-Replacing URLs: Links starting with "http" or "https" or "www" are replaced with "URL".
+	-Replacing Emojis: Replace emojis by using a pre-defined dictionary containing emojis along with their meaning.
+	-Replacing Usernames: Replace @Usernames with word "USER".
+	-Removing Non-Alphabets: Replacing characters except Digits and Alphabets with a space.
+	-Removing Consecutive letters: 3 or more consecutive letters are replaced by 2 letters
+	-Removing Short Words: Words with length less than 2 are removed
+	-Removing Stopwords: Stopwords are the English words which does not add much meaning to a sentence. They can safely be ignored without sacrifing the meaning of the sentence.
+	-Lemmatizing: Lemmatization is the process of converting a word to its base form. (e.g "Great" to "Good")
+4- Analsing the data: (done)
+	-> In this step we are going to use Word Clouds to see our data after preprocessing
+5- Splitting the data (done)
+6- TF-IDF Vectoriser: (done)
+	-> TF: Term Frequnecy: it measures how often a word appears in a document.
+	->IDF: Inverse Document Frequnecy: It measures how unique or rare word is across multiple documents
+	->TF-IDF score: It is the product of TF and IDF. It indicates the importance ot a word in a doucment or dataset.
+	->TF-IDF Vectorizer converts a collection of raw documents to a matrix of TF-IDF Features. The Vectorizer is usually trained on only the X_train dataset.
+	->ngram_range: is the range of number of words in a sequence. [e.g "very expensive" is a 2-gram that is considered as an extra feature separately from "very" and "expensive" when you have a n-gram range of (1,2)].
+	->max_features: Specifies the number of features to consider. 
+7- Transforming the dataset: (done)
+	-> Transforming the X_train and X_test dataset to a matrix of TF-IDF Features by using TF-IDF Vectorizer.
+8- Creating and Evaluating the model: (done)
+	-> In this step we are going to create 3 different types of model:
+		*Bernoulli Naive Bayes (BernoulliNB)
+		*Linear Support Vector Classification (LinearSVC)
+		*Logistic Regression (LR)
+	-> After creating the model, we are going to show the Classification Report and then the Confusion Matrix.
+9- Saving the models: (done)
+	-> We are going to use Pickle to save our models and our Vectorizer for later use.
+10- Using our models: (done)
